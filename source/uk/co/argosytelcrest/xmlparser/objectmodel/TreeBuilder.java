@@ -31,12 +31,12 @@
    to my paypal account (al@alsutton.com) at http://www.paypal.com/
  */
 
-package com.alsutton.xmlparser.objectmodel;
+package uk.co.argosytelcrest.xmlparser.objectmodel;
 
 import java.io.*;
 import java.util.*;
 
-import com.alsutton.xmlparser.*;
+import uk.co.argosytelcrest.xmlparser.*;
 
 /**
  * Class for building an the object tree.

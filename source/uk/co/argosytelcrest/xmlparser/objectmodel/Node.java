@@ -31,7 +31,7 @@
    to my paypal account (al@alsutton.com) at http://www.paypal.com/
  */
 
-package com.alsutton.xmlparser.objectmodel;
+package uk.co.argosytelcrest.xmlparser.objectmodel;
 
 import java.util.*;
 
@@ -300,7 +300,7 @@ public class Node
     xmlRepresentation.append( ">" );
     if( text != null )
     {
-      xmlRepresentation.append( text );
+      xmlRepresentation.append( text.toString() );
     }
 
     if( children != null )
@@ -310,9 +310,7 @@ public class Node
         Enumeration iter = children.elements();
         while( iter.hasMoreElements() )
         {
-          Object nextObject = iter.nextElement();
-          String nodeRepresentation = nextObject.toString();
-          xmlRepresentation.append( nodeRepresentation );
+          xmlRepresentation.append( iter.nextElement().toString() );
         }
       }
     }

@@ -24,7 +24,7 @@
   THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package com.alsutton.xmlparser;
+package uk.co.argosytelcrest.xmlparser;
 
 /**
  * The main XML Parser class.
@@ -61,12 +61,6 @@ public class XMLParser
   private boolean isUTF8Encoded;
 
   /**
-   * The buffer for incomming data.
-   */
-
-  private StringBuffer dataBuffer;
-
-  /**
    * The input stream being read.
    */
 
@@ -81,7 +75,6 @@ public class XMLParser
   public XMLParser( XMLEventListener _eventHandler )
   {
     eventHandler = _eventHandler;
-    dataBuffer = new StringBuffer();
   }
 
   /**
@@ -320,8 +313,7 @@ public class XMLParser
     throws IOException, EndOfXMLException
   {
     boolean startTag = true,
-            emptyTag = false,
-            hasMoreData = true;
+            emptyTag = false;
     String tagName = null;
     Hashtable attributes = null;
 

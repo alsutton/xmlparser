@@ -24,7 +24,7 @@
   THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package com.alsutton.xmlparser;
+package uk.co.argosytelcrest.xmlparser;
 
 /**
  * Exception thrown when the end of a XML stream is reached.

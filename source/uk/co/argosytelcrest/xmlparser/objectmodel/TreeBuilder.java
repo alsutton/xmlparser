@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2000,2001 Al Sutton (al@alsutton.com)
+  Copyright (c) 2001 Al Sutton (al@alsutton.com)
   All rights reserved.
   Redistribution and use in source and binary forms, with or without modification, are permitted
   provided that the following conditions are met:
@@ -11,7 +11,7 @@
   conditions and the following disclaimer in the documentation and/or other materials provided with
   the distribution.
 
-  Neither the name of Al Sutton nor the names of its contributors may be used to endorse or promote
+  Neither the name of Al Sutton nor alsutton.com may be used to endorse or promote
   products derived from this software without specific prior written permission.
 
   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR
@@ -23,6 +23,13 @@
   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
   THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+/*
+   Note on funding
+
+   If you feel my work on this project is worth something, please make a donation
+   to my paypal account (al@alsutton.com) at http://www.paypal.com/
+ */
 
 package com.alsutton.xmlparser.objectmodel;
 

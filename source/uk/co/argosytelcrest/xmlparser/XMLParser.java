@@ -235,6 +235,8 @@ public class XMLParser
       while( isWhitespace( thisChar ) && i < length )
       {
         i++;
+        if( i == length )
+          break;
         thisChar = data.charAt(i);
       }
       if( thisChar == '>' || i == length )

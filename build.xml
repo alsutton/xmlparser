@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<project name="J2ME" default="package" basedir="." >
+    
+	<property name="wtk.home" value="c:\wtk22"/>
+	<property name="midlet.name" value="XMLDemo"/>
+
+	<taskdef resource="antenna.properties"/>
+
+    <target name="compile" depends="">
+    	<delete		dir="classes"/>
+    	<mkdir		dir="classes"/>
+    	
+       	<wtkbuild	srcdir="source" 
+       	 			destdir="classes" 
+        			classpath="parser" 
+					preverify="false" />
+	</target>
+
+	<target name="package" depends="compile">
+		<jar	destfile="xmlparser.jar"
+				basedir="classes"/>
+	</target>
+</project>

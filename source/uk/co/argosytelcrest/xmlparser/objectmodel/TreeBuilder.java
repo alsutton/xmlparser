@@ -84,14 +84,9 @@ public class TreeBuilder
   public void tagStarted( String name, Hashtable attributes )
   {
     Node newNode = new Node( currentNode, name, attributes );
-    if( currentNode != null )
-    {
-      currentNode.addChild( newNode );
-    }
-    else
-    {
+    if( currentNode == null )
       rootNode = newNode;
-    }
+
     currentNode = newNode;
   }
 
@@ -119,8 +114,6 @@ public class TreeBuilder
   {
     String currentNodeName = currentNode.getName();
     if( currentNodeName.equals( name ) )
-    {
       currentNode = currentNode.getParent();
-    }
   }
 }

@@ -47,9 +47,14 @@ public class Node
 
   public Node( Node _parent, String _name, Hashtable _attributes )
   {
-    parent = _parent;
     tagName = _name;
     attributes = _attributes;
+
+    parent = _parent;
+    if( parent != null )
+    {
+      parent.addChild( this );
+    }
   }
 
   /**

@@ -71,14 +71,15 @@ public class XMLParser
    * @param checker The class used to check if the end condition has occurred.
    * @return A string representation of the data read.
    */
-  private String readUntilEnd( ReadEndChecker checker ) throws IOException
+  private String readUntilEnd( ReadEndChecker checker )
+    throws IOException, EndOfXMLException
   {
     StringBuffer data = new StringBuffer();
     boolean inQuote = false;
 
     int nextChar = inputReader.read();
-    if( nextChar == '\"' )
-      inQuote = true;
+    if( nextChar == -1 )
+      throw new EndOfXMLException();
     while( nextChar != -1 && (inQuote == true || checker.shouldStop( nextChar ) == false) )
     {
       if( nextChar == '\"')
@@ -201,7 +202,8 @@ public class XMLParser
    * Method to handle the reading in and dispatching of events for plain text.
    */
 
-  private void handlePlainText() throws IOException
+  private void handlePlainText()
+    throws IOException, EndOfXMLException
   {
     String data = readUntilEnd ( inPlaintextReadEndChecker );
     eventHandler.plaintextEncountered( data );
